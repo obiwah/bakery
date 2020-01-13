@@ -1,0 +1,22 @@
+{
+  "name": "bakery",
+  "version": "1.0.0",
+  "description": "Сайт хлебозавода Балашиха Хлеб",
+  "main": "js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obiwah/bakery.git"
+  },
+  "author": "Alexey Kuznetsov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/obiwah/bakery/issues"
+  },
+  "homepage": "https://github.com/obiwah/bakery#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
