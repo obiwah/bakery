@@ -1,0 +1,107 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 5.47rem
+
+  font-family: "Roboto", sans-serif
+
+  background: url("../img/back/header_background.png")
+
+  &__logo
+    float: left
+    margin-top: -7px
+
+    &:hover
+      transform: rotate(1deg)
+
+  &__link
+
+  &__menu
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    height: 5.47rem
+    padding-left: 1.3rem
+
+.brand
+  &__title
+    margin-top: 1.8rem
+
+    font: 700 1.67rem / 1.4rem "Nokia Sans S60", sans-serif
+    text-transform: uppercase
+
+    color: $header_dark
+
+  &__subtitle
+    font-weight: 300
+    font-size: 0.733rem
+    line-height: 0.903rem
+    text-transform: lowercase
+
+    color: $header_bright
+
+.communication
+  font-weight: 400
+  font-size: 1.067rem
+  line-height: 1.4rem
+
+  &__phone
+    display: block
+    margin-top: 1.2rem
+    margin-bottom: 0.1rem
+
+    text-decoration: none
+
+    color: $header_dark
+
+    &--big
+      font-size: 1.6rem
+
+  &__callback
+    padding: 0
+    margin-left: 2.8rem
+
+    font-weight: 300
+    font-size: 0.933rem
+    line-height: 0.903rem
+
+    border: none
+    border-bottom: 1px dashed $header_bright
+    color: $header_bright
+    background-color: transparent
+    cursor: pointer
+    outline: none
+
+    &::before
+      content: ""
+      position: absolute
+      margin-left: -2.8rem
+      width: 2.53rem
+      height: 1rem
+      margin-right: 0.267rem
+      background: url("../img/icons/callback.png") left no-repeat, url("../img/interface/arrow_long.png") right no-repeat
+
+  &__link
+    &:hover
+      transform: translateX(-2px)
+
+
+
+@media (max-width: 991px)
+  .header
+    &__logo
+      &:hover
+        transform: none
+
+  .communication
+    &__link
+      &:hover
+        transform: none
+
+
+
+
+
+
