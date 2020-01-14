@@ -1,0 +1,135 @@
+.hero
+  font-family: "Roboto Condensed", sans-serif
+
+  &__section
+    position: relative
+    padding-top: 8.9rem
+    text-align: center
+    text-transform: uppercase
+
+    background: url("../img/back/hero.jpg") 31% 55% no-repeat, url("../img/back/form.jpg") 90% bottom no-repeat
+
+  &__title
+    margin-bottom: 0.5rem
+
+    font-size: 3.067rem
+    font-weight: 700
+    line-height: 2.933rem
+
+    color: $hero_title
+
+  &__clarification
+    font-size: 1.467rem
+    font-weight: 700
+
+    color: $hero_primary
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-top: 3.6rem
+
+  &__badges
+    flex-basis: 65%
+    display: flex
+    justify-content: space-between
+
+    color: $hero_primary
+
+  &__badge
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 13.2rem
+    height: 13.2rem
+
+    text-align: center
+    vertical-align: center
+    color: #272727
+    background: url("../img/interface/badge_frame.png") center / 100% 100% no-repeat
+
+    &::after
+      content: url("../img/interface/badge_frame_shadow.png")
+      position: absolute
+      top: 99%
+
+    &-text
+      width: 10rem
+
+      font-size: 1.067rem
+      font-weight: 700
+
+  &__form
+    position: relative
+    width: 300px
+    min-width: 300px
+
+    background-color: $bright
+    border: 0.333rem solid $form_bright
+
+    z-index: 10
+
+  &__form-wrapper
+    position: relative
+    margin: 1.5rem 1.2rem 1.4rem
+
+.placeholder
+  position: relative
+  width: 100%
+  height: 0
+
+  &::before
+    content: ""
+    background: url("../img/interface/form_shadow.png") no-repeat
+    position: absolute
+    width: 350px
+    height: 113px
+    top: -76px
+    right: -25px
+    z-index: 3
+
+
+@media (max-width: 1820px)
+  .hero
+    &__section
+      background: url("../img/back/hero.jpg") 30% 55% no-repeat, url("../img/back/form.jpg") 95% bottom no-repeat
+
+@media (max-width: 1590px)
+  .hero
+    &__section
+     background: url("../img/back/hero.jpg") 24% 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat
+
+@media (max-width: 1470px)
+  .hero
+    &__section
+      background: url("../img/back/hero.jpg") 20% 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat
+
+@media (max-width: 1360px)
+  .hero
+    &__section
+      background: url("../img/back/hero.jpg") 13% 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat
+
+@media (max-width: 1270px)
+  .hero
+    &__section
+      background: url("../img/back/hero.jpg") 5% 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat
+
+@media (max-width: 1199px)
+  .hero
+    &__section
+      background: url("../img/back/hero.jpg") left 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat
+
+    &__clarification
+      font-size: 1.3rem
+
+  .placeholder
+    display: none
+
+@media (max-width: 991px)
+  .hero
+    &__section
+      background: url("../img/back/hero.jpg") left 55% no-repeat
+
+
