@@ -6,10 +6,9 @@
   
   <title>БАЛАШИХА ХЛЕБ</title>
   
-<!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic">-->
-
-<!--  <link rel="stylesheet" href="css/swiper.min.css">-->
-<!--  <link rel="stylesheet" href="css/animate_cut.css">-->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap&subset=cyrillic">
+  
   <link rel="stylesheet" href="css/style.css">
   
 <!--  <link rel="shortcut icon" type="image/png" href="img/icons/favicon.png"/>-->
@@ -21,7 +20,8 @@
       <a href="#"><img class="header__logo" src="img/logo.png" alt="logo"></a>
         <div class="header__menu">
           <div class="brand">
-            <h1 class="brand__title">Балашиха Хлеб</h1>
+            <img class="brand__title-img" src="img/brand.png" alt="Балашиха Хлеб">
+<!--            <h1 class="brand__title">Балашиха Хлеб</h1>-->
             <p class="brand__subtitle">хлебобулочные и кондитерские изделия</p>
           </div>
           <div class="communication">
@@ -37,7 +37,42 @@
   </header>
   
   <main>
-    <section class="section hero"></section>
+    <section class="section hero hero__section">
+      <div class="container">
+        <h2 class="hero__title">Уникальные коммерческие условия</h2>
+        <p class="hero__clarification">по поставкам хлебобулочных и кандитерских изделей от крупнейшего хлебзавода
+          в&nbsp;МО</p>
+        
+        <div class="hero__wrapper">
+          <div class="hero__badges">
+            <div class="hero__badge"><span class="hero__badge-text">60 тонн хлебобулочных изделий в день</span></div>
+            <div class="hero__badge"><span class="hero__badge-text">Старейший хлебзавод в Москве</span></div>
+            <div class="hero__badge"><span class="hero__badge-text">Уникальная система тройного контроля</span></div>
+          </div>
+          <!-- /.badges -->
+          <form class="form hero__form" action="#" method="post">
+            <div class="form__wrapper hero__form-wrapper">
+              <h3 class="form__title">Получите&nbsp;персональное
+                <span class="form__title--small">коммерческое&nbsp;предложение</span></h3>
+              <fieldset class="form__fieldset">
+                <input class="form__input form__name" type="text" placeholder="Ваше имя">
+                <input class="form__input form__email" type="email" placeholder="Ваш e-mail">
+                <input class="form__input form__phone" type="tel" placeholder="Ваш номер телефона">
+              </fieldset>
+              <!-- /.form__input -->
+              
+              <button class="form__button" type="button" type="submit">Получить КП!</button>
+              <div class="form__policy"><p class="form__policy-text hero__policy-text">Ваши данные не будут переданны третьим лицам,
+                согласно законам РФ</p></div>
+            </div>
+            <!-- /.form__wrapper -->
+          </form>
+        </div>
+        <!-- /.hero__wrapper -->
+        <div class="placeholder"></div>
+      </div>
+      <!-- /.container -->
+    </section>
     <!-- /.section hero -->
     
     <section class="section photos"></section>
@@ -63,6 +98,8 @@
   </main>
   
   <footer></footer>
+  
+  <script src="js/main.js"></script>
   
 </body>
 </html>
