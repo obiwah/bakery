@@ -45,8 +45,6 @@
     width: 13.2rem
     height: 13.2rem
 
-    text-align: center
-    vertical-align: center
     color: #272727
     background: url("../img/interface/badge_frame.png") center / 100% 100% no-repeat
 
@@ -71,9 +69,13 @@
 
     z-index: 10
 
-  &__form-wrapper
-    position: relative
-    margin: 1.5rem 1.2rem 1.4rem
+  &__form
+    &-wrapper
+      position: relative
+      margin: 1.5rem 1.2rem 1.4rem
+
+    &-title
+      margin-bottom: 1.53rem
 
 .placeholder
   position: relative
@@ -89,7 +91,6 @@
     top: -76px
     right: -25px
     z-index: 3
-
 
 @media (max-width: 1820px)
   .hero
@@ -124,12 +125,81 @@
     &__clarification
       font-size: 1.3rem
 
+    &__form
+      box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.57)
+
   .placeholder
     display: none
 
 @media (max-width: 991px)
   .hero
     &__section
-      background: url("../img/back/hero.jpg") left 55% no-repeat
+      background: url("../img/back/hero.jpg") center top no-repeat
+
+    &__title
+      font-size: 2.5rem
+
+    &__wrapper
+      flex-wrap: wrap
+      margin-top: 2rem
+
+    &__badges
+      flex-basis: 100%
+      justify-content: space-around
+
+    &__form
+      width: 80%
+      margin: 2rem auto 0
+
+      &-title
+        margin-bottom: 1rem
+
+        &--small
+          display: inline
+          font-size: 1.4rem
+
+      &-input
+        width: 45%
+
+      &-button
+        margin-top: 0
+        padding-top: 1.1rem
+        padding-bottom: 1.1rem
+
+        font: 300 0.933rem / 0.903rem "Roboto", sans-serif
+
+@media (max-width: 767px)
+  .hero
+    &__section
+      background: url("../img/back/hero.jpg") center center / 80% no-repeat
+
+    &__title
+      font-size: 2rem
+
+    &__form
+      width: 100%
+
+    &__badge
+      width: 150px
+      height: 150px
+
+      &-text
+        width: 80%
+
+        font-size: 0.9rem
+
+@media (max-width: 575px)
+  .hero
+    background: url("../img/back/hero.jpg") center 100px / 80% no-repeat
+
+    &__badges
+
+    &__badge
+      width: 100px
+      height: 100px
+
+      &-text
+        font-size: 0.7rem
+
 
 
