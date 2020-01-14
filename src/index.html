@@ -11,27 +11,28 @@
   
   <link rel="stylesheet" href="css/style.css">
   
-<!--  <link rel="shortcut icon" type="image/png" href="img/icons/favicon.png"/>-->
+  <!--  <link rel="shortcut icon" type="image/png" href="img/icons/favicon.png"/>-->
 </head>
 
 <body>
   <header class="header">
     <div class="container">
       <a href="#"><img class="header__logo" src="img/logo.png" alt="logo"></a>
-        <div class="header__menu">
-          <div class="brand">
-            <img class="brand__title-img" src="img/brand.png" alt="Балашиха Хлеб">
-<!--            <h1 class="brand__title">Балашиха Хлеб</h1>-->
-            <p class="brand__subtitle">хлебобулочные и кондитерские изделия</p>
-          </div>
-          <div class="communication">
-            <a class="communication__phone communication__link" href="tel:84957771100" title="Позвонить сейчас!">8(495)
-              <span class="communication__phone--big">777-11-00</span></a>
-            <button class="communication__callback communication__link" id="callback"
-                    title="Мы сами перезвоним!">Перезвоните мне!</button>
-          </div>
+      <div class="header__menu">
+        <div class="brand">
+          <img class="brand__title-img" src="img/brand.png" alt="Балашиха Хлеб">
+          <!--            <h1 class="brand__title">Балашиха Хлеб</h1>-->
+          <p class="brand__subtitle">хлебобулочные и кондитерские изделия</p>
         </div>
-        <!-- /.menu -->
+        <div class="communication">
+          <a class="communication__phone communication__link" href="tel:84957771100" title="Позвонить сейчас!">8(495)
+            <span class="communication__phone--big">777-11-00</span></a>
+          <button class="communication__callback communication__link" id="callback"
+                  title="Мы сами перезвоним!">Перезвоните мне!
+          </button>
+        </div>
+      </div>
+      <!-- /.menu -->
     </div>
     <!-- /.container -->
   </header>
@@ -40,8 +41,8 @@
     <section class="section hero hero__section">
       <div class="container">
         <h2 class="hero__title">Уникальные коммерческие условия</h2>
-        <p class="hero__clarification">по поставкам хлебобулочных и кандитерских изделей от крупнейшего хлебзавода
-          в&nbsp;МО</p>
+        <p class="hero__clarification">по поставкам хлебобулочных и кандитерских изделей
+          от&nbsp;крупнейшего&nbsp;хлебзавода&nbsp;в&nbsp;МО</p>
         
         <div class="hero__wrapper">
           <div class="hero__badges">
@@ -52,24 +53,23 @@
           <!-- /.badges -->
           <form class="form hero__form" action="#" method="post">
             <div class="form__wrapper hero__form-wrapper">
-              <h3 class="form__title">Получите&nbsp;персональное
-                <span class="form__title--small">коммерческое&nbsp;предложение</span></h3>
-              <fieldset class="form__fieldset">
-                <input class="form__input form__name" type="text" placeholder="Ваше имя">
-                <input class="form__input form__email" type="email" placeholder="Ваш e-mail">
-                <input class="form__input form__phone" type="tel" placeholder="Ваш номер телефона">
+              <h3 class="form__title hero__form-title">Получите&nbsp;персональное
+                <span class="form__title--small hero__form-title--small">коммерческое&nbsp;предложение</span></h3>
+              <fieldset class="form__fieldset hero__form-fieldset">
+                <input class="form__input form__name hero__form-input" type="text" placeholder="Ваше имя">
+                <input class="form__input form__email hero__form-input" type="email" placeholder="Ваш e-mail">
+                <input class="form__input form__phone hero__form-input" type="tel" placeholder="Ваш номер телефона">
+                <button class="form__button hero__form-input hero__form-button" type="submit">Получить КП!</button>
               </fieldset>
               <!-- /.form__input -->
-              
-              <button class="form__button" type="button" type="submit">Получить КП!</button>
-              <div class="form__policy"><p class="form__policy-text hero__policy-text">Ваши данные не будут переданны третьим лицам,
-                согласно законам РФ</p></div>
+              <div class="form__policy"><p class="form__policy-text hero__policy-text">Ваши данные не будут переданны
+                третьим лицам, согласно законам РФ</p></div>
             </div>
             <!-- /.form__wrapper -->
           </form>
         </div>
         <!-- /.hero__wrapper -->
-        <div class="placeholder"></div>
+        <div class="placeholder"></div> <!--        костыль для вставки тени под форму-->
       </div>
       <!-- /.container -->
     </section>
@@ -80,19 +80,19 @@
     
     <section class="section advantages"></section>
     <!-- /.section advantages -->
-  
+    
     <section class="section catalog"></section>
     <!-- /.section catalog -->
-  
+    
     <section class="section about"></section>
     <!-- /.section about -->
     
     <section class="section offer"></section>
     <!-- /.section offer -->
-  
+    
     <section class="section gallery"></section>
     <!-- /.section gallery -->
-  
+    
     <section class="section map"></section>
     <!-- /.section map -->
   </main>
@@ -100,6 +100,6 @@
   <footer></footer>
   
   <script src="js/main.js"></script>
-  
+
 </body>
 </html>
