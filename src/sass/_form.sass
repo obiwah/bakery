@@ -59,6 +59,9 @@
     outline: none
     cursor: pointer
 
+    &:hover
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+
   &__policy
     font: 300 0.733rem / 0.733rem "Roboto", sans-serif
 
@@ -70,3 +73,9 @@
       margin: auto
 
       text-transform: none
+
+@media (max-width: 991px)
+  .form
+    &__button
+      &:hover
+        box-shadow: none
