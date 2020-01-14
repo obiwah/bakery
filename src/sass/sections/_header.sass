@@ -9,6 +9,8 @@
 
   background: url("../img/back/header_background.png")
 
+  z-index: 10
+
   &__logo
     float: left
     margin-top: -7px
@@ -34,13 +36,17 @@
 
     color: $header_dark
 
+    &-img
+      height: 20px
+      margin-top: 1.8rem
+
   &__subtitle
     font-weight: 300
     font-size: 0.733rem
     line-height: 0.903rem
     text-transform: lowercase
 
-    color: $header_bright
+    color: $bright
 
 .communication
   font-weight: 400
@@ -68,8 +74,8 @@
     line-height: 0.903rem
 
     border: none
-    border-bottom: 1px dashed $header_bright
-    color: $header_bright
+    border-bottom: 1px dashed $bright
+    color: $bright
     background-color: transparent
     cursor: pointer
     outline: none
@@ -87,7 +93,11 @@
     &:hover
       transform: translateX(-2px)
 
-
+@media (max-width: 1199px)
+  .brand
+    &__title
+      &-img
+        height: 18px
 
 @media (max-width: 991px)
   .header
