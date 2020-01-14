@@ -396,7 +396,7 @@ h1, h2, h3, p {
     width: 85%;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .container {
     width: 90%;
   }
@@ -428,7 +428,6 @@ h1, h2, h3, p {
   align-items: center;
 }
 .form__title {
-  margin-bottom: 1.53rem;
   font: 300 1.4rem/1.467rem "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   color: #fdf1cf;
@@ -475,6 +474,9 @@ h1, h2, h3, p {
   outline: none;
   cursor: pointer;
 }
+.form__button:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
 .form__policy {
   font: 300 0.733rem/0.733rem "Roboto", sans-serif;
   color: #ffffff;
@@ -486,6 +488,11 @@ h1, h2, h3, p {
   text-transform: none;
 }
 
+@media (max-width: 991px) {
+  .form__button:hover {
+    box-shadow: none;
+  }
+}
 .header {
   position: fixed;
   top: 0;
@@ -625,8 +632,6 @@ h1, h2, h3, p {
   align-items: center;
   width: 13.2rem;
   height: 13.2rem;
-  text-align: center;
-  vertical-align: center;
   color: #272727;
   background: url("../img/interface/badge_frame.png") center/100% 100% no-repeat;
 }
@@ -651,6 +656,9 @@ h1, h2, h3, p {
 .hero__form-wrapper {
   position: relative;
   margin: 1.5rem 1.2rem 1.4rem;
+}
+.hero__form-title {
+  margin-bottom: 1.53rem;
 }
 
 .placeholder {
@@ -701,6 +709,9 @@ h1, h2, h3, p {
   .hero__clarification {
     font-size: 1.3rem;
   }
+  .hero__form {
+    box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.57);
+  }
 
   .placeholder {
     display: none;
@@ -708,7 +719,69 @@ h1, h2, h3, p {
 }
 @media (max-width: 991px) {
   .hero__section {
-    background: url("../img/back/hero.jpg") left 55% no-repeat;
+    background: url("../img/back/hero.jpg") center top no-repeat;
+  }
+  .hero__title {
+    font-size: 2.5rem;
+  }
+  .hero__wrapper {
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .hero__badges {
+    flex-basis: 100%;
+    justify-content: space-around;
+  }
+  .hero__form {
+    width: 80%;
+    margin: 2rem auto 0;
+  }
+  .hero__form-title {
+    margin-bottom: 1rem;
+  }
+  .hero__form-title--small {
+    display: inline;
+    font-size: 1.4rem;
+  }
+  .hero__form-input {
+    width: 45%;
+  }
+  .hero__form-button {
+    margin-top: 0;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    font: 300 0.933rem/0.903rem "Roboto", sans-serif;
+  }
+}
+@media (max-width: 767px) {
+  .hero__section {
+    background: url("../img/back/hero.jpg") center center/80% no-repeat;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__form {
+    width: 100%;
+  }
+  .hero__badge {
+    width: 150px;
+    height: 150px;
+  }
+  .hero__badge-text {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 575px) {
+  .hero {
+    background: url("../img/back/hero.jpg") center 100px/80% no-repeat;
+  }
+  .hero__badge {
+    width: 100px;
+    height: 100px;
+  }
+  .hero__badge-text {
+    font-size: 0.7rem;
   }
 }
 
