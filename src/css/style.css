@@ -347,21 +347,51 @@ html {
   box-sizing: inherit;
 }
 
-h1, p {
+h1, h2, h3, p {
   margin: 0;
 }
 
-.container {
-  width: 65%;
+@media (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+}
+.section {
+  max-width: 1920px;
   margin: auto;
 }
 
-@media (max-width: 1199px) {
+.container {
+  width: 52.6%;
+  margin: auto;
+}
+
+@media (max-width: 1820px) {
+  .container {
+    width: 60%;
+  }
+}
+@media (max-width: 1590px) {
+  .container {
+    width: 65%;
+  }
+}
+@media (max-width: 1470px) {
+  .container {
+    width: 70%;
+  }
+}
+@media (max-width: 1360px) {
   .container {
     width: 75%;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1270px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 1199px) {
   .container {
     width: 85%;
   }
@@ -392,6 +422,70 @@ h1, p {
   font-style: normal;
   font-display: swap;
 }
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form__title {
+  margin-bottom: 1.53rem;
+  font: 300 1.4rem/1.467rem "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  color: #fdf1cf;
+}
+.form__title--small {
+  display: block;
+  font-size: 1.2rem;
+}
+.form__fieldset {
+  border: none;
+  padding: 0;
+}
+.form__input {
+  width: 100%;
+  margin-bottom: 0.4rem;
+  padding: 0.9rem 15% 0.9rem 1rem;
+  font: 300 0.933rem/0.903rem "Roboto", sans-serif;
+  color: #2f2f2f;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+.form__name {
+  background: #ffffff url("../img/icons/person.png") 95% center no-repeat;
+}
+.form__email {
+  background: #ffffff url("../img/icons/envelope.png") 95% center no-repeat;
+}
+.form__phone {
+  background: #ffffff url("../img/icons/phone.png") 95% center no-repeat;
+}
+.form__button {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.9rem;
+  padding: 1.5rem 0 1.33rem;
+  font: 700 1.2rem/0.903rem "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0.067rem 0.067rem 0 rgba(0, 0, 0, 0.09);
+  color: #ffffff;
+  background-image: linear-gradient(to top, #03c9a9 0%, #13efcb 100%);
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+.form__policy {
+  font: 300 0.733rem/0.733rem "Roboto", sans-serif;
+  color: #ffffff;
+  background: url("../img/icons/storage.png") left center no-repeat, url("../img/icons/storage.png") right center no-repeat;
+}
+.form__policy-text {
+  width: 78%;
+  margin: auto;
+  text-transform: none;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -400,6 +494,7 @@ h1, p {
   height: 5.47rem;
   font-family: "Roboto", sans-serif;
   background: url("../img/back/header_background.png");
+  z-index: 10;
 }
 .header__logo {
   float: left;
@@ -421,6 +516,10 @@ h1, p {
   font: 700 1.67rem/1.4rem "Nokia Sans S60", sans-serif;
   text-transform: uppercase;
   color: #393939;
+}
+.brand__title-img {
+  height: 20px;
+  margin-top: 1.8rem;
 }
 .brand__subtitle {
   font-weight: 300;
@@ -471,6 +570,11 @@ h1, p {
   transform: translateX(-2px);
 }
 
+@media (max-width: 1199px) {
+  .brand__title-img {
+    height: 18px;
+  }
+}
 @media (max-width: 991px) {
   .header__logo:hover {
     transform: none;
@@ -478,6 +582,133 @@ h1, p {
 
   .communication__link:hover {
     transform: none;
+  }
+}
+.hero {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.hero__section {
+  position: relative;
+  padding-top: 8.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  background: url("../img/back/hero.jpg") 31% 55% no-repeat, url("../img/back/form.jpg") 90% bottom no-repeat;
+}
+.hero__title {
+  margin-bottom: 0.5rem;
+  font-size: 3.067rem;
+  font-weight: 700;
+  line-height: 2.933rem;
+  color: #7d3803;
+}
+.hero__clarification {
+  font-size: 1.467rem;
+  font-weight: 700;
+  color: #272727;
+}
+.hero__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 3.6rem;
+}
+.hero__badges {
+  flex-basis: 65%;
+  display: flex;
+  justify-content: space-between;
+  color: #272727;
+}
+.hero__badge {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13.2rem;
+  height: 13.2rem;
+  text-align: center;
+  vertical-align: center;
+  color: #272727;
+  background: url("../img/interface/badge_frame.png") center/100% 100% no-repeat;
+}
+.hero__badge::after {
+  content: url("../img/interface/badge_frame_shadow.png");
+  position: absolute;
+  top: 99%;
+}
+.hero__badge-text {
+  width: 10rem;
+  font-size: 1.067rem;
+  font-weight: 700;
+}
+.hero__form {
+  position: relative;
+  width: 300px;
+  min-width: 300px;
+  background-color: #f64747;
+  border: 0.333rem solid #fdf1cf;
+  z-index: 10;
+}
+.hero__form-wrapper {
+  position: relative;
+  margin: 1.5rem 1.2rem 1.4rem;
+}
+
+.placeholder {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+.placeholder::before {
+  content: "";
+  background: url("../img/interface/form_shadow.png") no-repeat;
+  position: absolute;
+  width: 350px;
+  height: 113px;
+  top: -76px;
+  right: -25px;
+  z-index: 3;
+}
+
+@media (max-width: 1820px) {
+  .hero__section {
+    background: url("../img/back/hero.jpg") 30% 55% no-repeat, url("../img/back/form.jpg") 95% bottom no-repeat;
+  }
+}
+@media (max-width: 1590px) {
+  .hero__section {
+    background: url("../img/back/hero.jpg") 24% 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
+  }
+}
+@media (max-width: 1470px) {
+  .hero__section {
+    background: url("../img/back/hero.jpg") 20% 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
+  }
+}
+@media (max-width: 1360px) {
+  .hero__section {
+    background: url("../img/back/hero.jpg") 13% 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
+  }
+}
+@media (max-width: 1270px) {
+  .hero__section {
+    background: url("../img/back/hero.jpg") 5% 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
+  }
+}
+@media (max-width: 1199px) {
+  .hero__section {
+    background: url("../img/back/hero.jpg") left 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
+  }
+  .hero__clarification {
+    font-size: 1.3rem;
+  }
+
+  .placeholder {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .hero__section {
+    background: url("../img/back/hero.jpg") left 55% no-repeat;
   }
 }
 
