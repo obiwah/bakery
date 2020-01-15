@@ -1,3 +1,6 @@
+.menu__button, .phone__close
+  display: none
+
 .header
   position: fixed
   top: 0
@@ -112,31 +115,60 @@
   .header
     &__menu
       align-items: center
+
   .brand
     &__title
       &-img
-        //height: 15px
+        //display: none
         margin-top: 0
         align-self: center
 
     &__subtitle
-      //display: none
+      display: none
 
   .communication
-    width: 40px
-    height: 40px
+    display: none
+    vertical-align: center
 
-    background: url("../img/icons/phone-call.svg") center center / cover no-repeat
+    border-radius: 3px
 
     &__phone
-      display: none
+      display: inline
+
+      margin: 0 2rem 0 0
+
+      &--big
+        font-size: inherit
 
     &__callback
-      display: none
+      display: inline
+
+      margin: 0 3rem 0 0
+
+      &::before
+        content: none
+
+  .phone__close
+    display: none
+    position: absolute
+    top: 5px
+    right: 7%
+    font: 400 1.5rem "Roboto", sans-serif
+
+    color: $header_dark
+
+  .menu
+    &__button
+      display: inline-block
+
+      width: 40px
+      height: 40px
+
 
 @media (max-width: 420px)
   .header
     &__menu
+      //display: none
       padding-left: 0.5rem
 
   .brand
@@ -147,9 +179,13 @@
     &__subtitle
       display: none
 
-  .communication
-    width: 30px
-    height: 30px
+  .menu
+    &__button
+
+      width: 28px
+      height: 28px
+
+
 
 
 
