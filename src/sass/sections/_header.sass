@@ -9,7 +9,7 @@
 
   background: url("../img/back/header_background.png")
 
-  z-index: 10
+  z-index: 99
 
   &__logo
     float: left
@@ -17,8 +17,6 @@
 
     &:hover
       transform: rotate(1deg)
-
-  &__link
 
   &__menu
     display: flex
@@ -109,6 +107,49 @@
     &__link
       &:hover
         transform: none
+
+@media (max-width: 575px)
+  .header
+    &__menu
+      align-items: center
+  .brand
+    &__title
+      &-img
+        //height: 15px
+        margin-top: 0
+        align-self: center
+
+    &__subtitle
+      //display: none
+
+  .communication
+    width: 40px
+    height: 40px
+
+    background: url("../img/icons/phone-call.svg") center center / cover no-repeat
+
+    &__phone
+      display: none
+
+    &__callback
+      display: none
+
+@media (max-width: 420px)
+  .header
+    &__menu
+      padding-left: 0.5rem
+
+  .brand
+    &__title
+      &-img
+        height: 12px
+
+    &__subtitle
+      display: none
+
+  .communication
+    width: 30px
+    height: 30px
 
 
 
