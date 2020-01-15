@@ -5,7 +5,7 @@ const {src, dest, series} = require(`gulp`),
 	minifyJs = require('gulp-minify');
 
 function buildHtml (cb) {
-	src(`*.html`)
+	src(`src/*.html`)
 		.pipe(htmlMin({
 			collapseWhitespace: true,
 			removeComments: true}))
@@ -15,37 +15,37 @@ function buildHtml (cb) {
 }
 
 function buildPhp(cb) {
-	src(`*.php`).pipe(dest(`dist/`));
-	src(`phpMailer/*.php`).pipe(dest(`dist/phpMailer/`));
+	src(`src/*.php`).pipe(dest(`dist/`));
+	src(`src/phpMailer/*.php`).pipe(dest(`dist/phpMailer/`));
 
 	cb();
 }
 
 function buildCss(cb) {
-	src(`css/style.css`)
+	src(`src/css/style.css`)
 		.pipe(autoprefixer({grid: "autoplace"}))
 		.pipe(cleanCss())
 		.pipe(dest(`dist/css`));
 
-	src([`css/**/*.css`, `!css/style.css`, `!css/**/*.min.css`])
+	src([`src/css/**/*.css`, `!src/css/style.css`, `!src/css/**/*.min.css`])
 		.pipe(cleanCss())
 		.pipe(dest(`dist/css`));
 
-	src(`css/**/*.min.css`)
+	src(`src/css/**/*.min.css`)
 		.pipe(dest(`dist/css`));
 
 	cb();
 }
 
 function buildFonts (cb) {
-	src(`fonts/**/**`)
+	src(`src/fonts/**/**`)
 		.pipe(dest(`dist/fonts`));
 
 	cb();
 }
 
 function buildImg (cb) {
-	src(`img/**/*`)
+	src(`src/img/**/*`)
 		// .pipe(imageMin()) // image compression via webStorm plugin, just copy
 		.pipe(dest(`dist/img`));
 
@@ -53,13 +53,13 @@ function buildImg (cb) {
 }
 
 function buildJs (cb) {
-	src(`js/**/*`)
+	src(`src/js/**/*`)
 		.pipe(minifyJs({
 			noSource : true,
 			ext:{
 				min:'.js'
 			},
-			ignoreFiles: ['*.min.js']
+			ignoreFiles: ['src/*.min.js']
 		}))
 		.pipe(dest(`dist/js`));
 
