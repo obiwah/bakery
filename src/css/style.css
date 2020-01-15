@@ -337,6 +337,27 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: "Nokia Sans S60";
+  src: url("../fonts/NokiaSansS60-Bold.woff") format("woff"), url("../fonts/NokiaSansS60-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Light.woff") format("woff"), url("../fonts/Roboto/Roboto-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   box-sizing: border-box;
   font-size: 15px;
@@ -401,26 +422,18 @@ h1, h2, h3, p {
     width: 90%;
   }
 }
-@font-face {
-  font-family: "Nokia Sans S60";
-  src: url("../fonts/NokiaSansS60-Bold.woff") format("woff"), url("../fonts/NokiaSansS60-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+.section {
+  text-align: center;
 }
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto/Roboto-Light.woff") format("woff"), url("../fonts/Roboto/Roboto-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+.section__title {
+  font: 400 2.133rem/2.267rem "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
 }
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+
+@media (max-width: 575px) {
+  .section__title {
+    font-size: 1.5rem;
+  }
 }
 .form__wrapper {
   display: flex;
@@ -438,6 +451,7 @@ h1, h2, h3, p {
 }
 .form__fieldset {
   border: none;
+  margin: 0;
   padding: 0;
 }
 .form__input {
@@ -493,6 +507,10 @@ h1, h2, h3, p {
     box-shadow: none;
   }
 }
+.menu__button, .phone__close {
+  display: none;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -501,7 +519,7 @@ h1, h2, h3, p {
   height: 5.47rem;
   font-family: "Roboto", sans-serif;
   background: url("../img/back/header_background.png");
-  z-index: 10;
+  z-index: 99;
 }
 .header__logo {
   float: left;
@@ -591,15 +609,79 @@ h1, h2, h3, p {
     transform: none;
   }
 }
-.hero {
-  font-family: "Roboto Condensed", sans-serif;
+@media (max-width: 575px) {
+  .header__menu {
+    align-items: center;
+  }
+
+  .brand__title-img {
+    margin-top: 0;
+    align-self: center;
+  }
+  .brand__subtitle {
+    display: none;
+  }
+
+  .communication {
+    display: none;
+    vertical-align: center;
+    border-radius: 3px;
+  }
+  .communication__phone {
+    display: inline;
+    margin: 0 2rem 0 0;
+  }
+  .communication__phone--big {
+    font-size: inherit;
+  }
+  .communication__callback {
+    display: inline;
+    margin: 0 3rem 0 0;
+  }
+  .communication__callback::before {
+    content: none;
+  }
+
+  .phone__close {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 7%;
+    font: 400 1.5rem "Roboto", sans-serif;
+    color: #393939;
+  }
+
+  .menu__button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 420px) {
+  .header__menu {
+    padding-left: 0.5rem;
+  }
+
+  .brand__title-img {
+    height: 12px;
+  }
+  .brand__subtitle {
+    display: none;
+  }
+
+  .menu__button {
+    width: 28px;
+    height: 28px;
+  }
 }
 .hero__section {
+  font-family: "Roboto Condensed", sans-serif;
   position: relative;
   padding-top: 8.9rem;
+  margin-bottom: 5.27rem;
   text-align: center;
   text-transform: uppercase;
-  background: url("../img/back/hero.jpg") 31% 55% no-repeat, url("../img/back/form.jpg") 90% bottom no-repeat;
+  background: url("../img/back/hero.jpg") 31% bottom no-repeat, url("../img/back/form.jpg") 90% bottom no-repeat;
 }
 .hero__title {
   margin-bottom: 0.5rem;
@@ -679,32 +761,32 @@ h1, h2, h3, p {
 
 @media (max-width: 1820px) {
   .hero__section {
-    background: url("../img/back/hero.jpg") 30% 55% no-repeat, url("../img/back/form.jpg") 95% bottom no-repeat;
+    background: url("../img/back/hero.jpg") 30% bottom no-repeat, url("../img/back/form.jpg") 95% bottom no-repeat;
   }
 }
 @media (max-width: 1590px) {
   .hero__section {
-    background: url("../img/back/hero.jpg") 24% 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
+    background: url("../img/back/hero.jpg") 24% bottom no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
   }
 }
 @media (max-width: 1470px) {
   .hero__section {
-    background: url("../img/back/hero.jpg") 20% 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
+    background: url("../img/back/hero.jpg") 20% bottom no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
   }
 }
 @media (max-width: 1360px) {
   .hero__section {
-    background: url("../img/back/hero.jpg") 13% 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
+    background: url("../img/back/hero.jpg") 13% bottom no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
   }
 }
 @media (max-width: 1270px) {
   .hero__section {
-    background: url("../img/back/hero.jpg") 5% 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
+    background: url("../img/back/hero.jpg") 5% bottom no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
   }
 }
 @media (max-width: 1199px) {
   .hero__section {
-    background: url("../img/back/hero.jpg") left 55% no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
+    background: url("../img/back/hero.jpg") left bottom no-repeat, url("../img/back/form.jpg") right bottom no-repeat;
   }
   .hero__clarification {
     font-size: 1.3rem;
@@ -743,11 +825,14 @@ h1, h2, h3, p {
     display: inline;
     font-size: 1.4rem;
   }
+  .hero__form-fieldset {
+    margin-bottom: 0.5rem;
+  }
   .hero__form-input {
     width: 45%;
   }
   .hero__form-button {
-    margin-top: 0;
+    margin: 0;
     padding-top: 1.1rem;
     padding-bottom: 1.1rem;
     font: 300 0.933rem/0.903rem "Roboto", sans-serif;
@@ -773,16 +858,60 @@ h1, h2, h3, p {
   }
 }
 @media (max-width: 575px) {
-  .hero {
-    background: url("../img/back/hero.jpg") center 100px/80% no-repeat;
+  .hero__section {
+    margin-bottom: 3rem;
+    background: none;
+  }
+  .hero__img {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: block !important;
+  }
+  .hero__wrapper {
+    margin-top: 0;
   }
   .hero__badge {
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
   }
   .hero__badge-text {
     font-size: 0.7rem;
   }
+  .hero__badge::after {
+    content: "";
+  }
+  .hero__title {
+    line-height: 2rem;
+  }
+  .hero__clarification {
+    margin: 1rem auto;
+  }
+  .hero__form {
+    width: 90%;
+    min-width: 250px;
+  }
+  .hero__form-input {
+    width: 90%;
+  }
+  .hero__form-button {
+    margin-top: 0;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    font: 300 0.933rem/0.903rem "Roboto", sans-serif;
+  }
+}
+@media (max-width: 420px) {
+  .hero__form-title {
+    font-size: 1.2rem;
+  }
+  .hero__form-title--small {
+    font-size: 1rem;
+  }
+}
+.photos__section {
+  padding-top: 3.2rem;
+  background-color: #fff9e6;
 }
 
 /*# sourceMappingURL=style.css.map */
