@@ -372,6 +372,10 @@ h1, h2, h3, p {
   margin: 0;
 }
 
+.menu__button, .phone__close, .hero__img {
+  display: none;
+}
+
 @media (max-width: 1199px) {
   html {
     font-size: 14px;
@@ -507,10 +511,6 @@ h1, h2, h3, p {
     box-shadow: none;
   }
 }
-.menu__button, .phone__close {
-  display: none;
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -866,7 +866,7 @@ h1, h2, h3, p {
     width: 90%;
     height: auto;
     margin: auto;
-    display: block !important;
+    display: block;
   }
   .hero__wrapper {
     margin-top: 0;
