@@ -1,9 +1,17 @@
 .section
-  text-align: center
-
   &__title
+    position: relative
+    text-align: center
+
     font: 400 2.133rem / 2.267rem "Roboto Condensed", sans-serif
     text-transform: uppercase
+
+    color: $primary
+
+    &::after
+      content: url("../img/interface/section_img.png")
+      display: block
+      margin-top: -5px
 
 @media (max-width: 575px)
   .section
