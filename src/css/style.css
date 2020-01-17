@@ -426,12 +426,17 @@ h1, h2, h3, p {
     width: 90%;
   }
 }
-.section {
-  text-align: center;
-}
 .section__title {
+  position: relative;
+  text-align: center;
   font: 400 2.133rem/2.267rem "Roboto Condensed", sans-serif;
   text-transform: uppercase;
+  color: #1b1b1b;
+}
+.section__title::after {
+  content: url("../img/interface/section_img.png");
+  display: block;
+  margin-top: -5px;
 }
 
 @media (max-width: 575px) {
@@ -511,6 +516,23 @@ h1, h2, h3, p {
     box-shadow: none;
   }
 }
+.shadow {
+  position: absolute;
+  bottom: 0;
+  left: -14px;
+  width: calc(100% + 28px);
+  height: 74px;
+  transform: rotateX(164deg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+.shadow::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  box-shadow: 0px -9px 15px 1px rgba(0, 0, 0, 0.51);
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -658,27 +680,38 @@ h1, h2, h3, p {
   }
 }
 @media (max-width: 420px) {
+  .header {
+    height: 60px;
+  }
+  .header__logo {
+    height: 80px;
+    width: auto;
+  }
   .header__menu {
     padding-left: 0.5rem;
   }
 
+  .brand {
+    margin-top: -10px;
+  }
   .brand__title-img {
-    height: 12px;
+    height: 14px;
   }
   .brand__subtitle {
     display: none;
   }
 
   .menu__button {
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
+    margin-top: -15px;
   }
 }
 .hero__section {
   font-family: "Roboto Condensed", sans-serif;
   position: relative;
   padding-top: 8.9rem;
-  margin-bottom: 5.27rem;
+  margin-bottom: 4.3rem;
   text-align: center;
   text-transform: uppercase;
   background: url("../img/back/hero.jpg") 31% bottom no-repeat, url("../img/back/form.jpg") 90% bottom no-repeat;
@@ -801,7 +834,7 @@ h1, h2, h3, p {
 }
 @media (max-width: 991px) {
   .hero__section {
-    background: url("../img/back/hero.jpg") center top no-repeat;
+    background: url("../img/back/hero.jpg") center 25% no-repeat;
   }
   .hero__title {
     font-size: 2.5rem;
@@ -902,6 +935,9 @@ h1, h2, h3, p {
   }
 }
 @media (max-width: 420px) {
+  .hero__section {
+    padding-top: 80px;
+  }
   .hero__form-title {
     font-size: 1.2rem;
   }
@@ -910,8 +946,28 @@ h1, h2, h3, p {
   }
 }
 .photos__section {
-  padding-top: 3.2rem;
+  padding-top: 3rem;
+  padding-bottom: 3.87rem;
   background-color: #fff9e6;
+}
+.photos__title {
+  margin-bottom: 0.5rem;
+}
+.photos__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.photos__text {
+  max-width: 25.8rem;
+  font: 300 1.067rem/1.533rem "Roboto", sans-serif;
+  color: #1b1b1b;
+}
+.photos__paragraph {
+  margin-top: 2rem;
+}
+.photos__carousel {
+  position: relative;
+  perspective: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */
