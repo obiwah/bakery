@@ -22,5 +22,37 @@ document.addEventListener(`DOMContentLoaded`, function () { //wait for document 
 			phoneBtn.style.display = `block`;
 			brandBlock.style.display = `block`;
 		}
-	}
+	};
+
+	const swiper = new Swiper ('.swiper-container', {
+		// Optional parameters
+		initialSlide: 2,
+		autoHeight: true,
+		watchOverflow: true,
+		spaceBetween: 0,
+
+		// grabCursor: true,
+
+		preventInteractionOnTransition: true,
+
+		preloadImages: true, //When enabled Swiper will force to load all images
+
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	const swiperControl = document.querySelector(`.swiper__control`);
+
+	swiperControl.style.left = swiper.width / 2 - swiperControl.getBoundingClientRect().width / 2 + `px`;
+
+
 });
