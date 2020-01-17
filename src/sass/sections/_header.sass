@@ -116,7 +116,6 @@
   .brand
     &__title
       &-img
-        //display: none
         margin-top: 0
         align-self: center
 
@@ -164,23 +163,31 @@
 
 @media (max-width: 420px)
   .header
+    height: 60px
+
+    &__logo
+      height: 80px
+      width: auto
+
     &__menu
-      //display: none
       padding-left: 0.5rem
 
   .brand
+    margin-top: -10px
+
     &__title
       &-img
-        height: 12px
+        height: 14px
+
 
     &__subtitle
       display: none
 
   .menu
     &__button
-
-      width: 28px
-      height: 28px
+      width: 25px
+      height: 25px
+      margin-top: -15px
 
 
 
