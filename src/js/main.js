@@ -11,9 +11,7 @@ document.addEventListener(`DOMContentLoaded`, function () { //wait for document 
 	phoneBtn.onmousedown = function () {
 		brandBlock.style.display = `none`;
 		phoneBtn.style.display = `none`;
-		communicationBlock.style.width = `0%`;
 		communicationBlock.style.display = `block`;
-		communicationBlock.style.width = `100%`;
 		phoneCloseBtn.style.display = `block`;
 
 		phoneCloseBtn.onmousedown = function () {
@@ -24,6 +22,7 @@ document.addEventListener(`DOMContentLoaded`, function () { //wait for document 
 		}
 	};
 
+	// swiper options
 	const swiper = new Swiper ('.swiper-container', {
 		// Optional parameters
 		initialSlide: 2,
@@ -52,7 +51,15 @@ document.addEventListener(`DOMContentLoaded`, function () { //wait for document 
 
 	const swiperControl = document.querySelector(`.swiper__control`);
 
-	swiperControl.style.left = swiper.width / 2 - swiperControl.getBoundingClientRect().width / 2 + `px`;
+	swiperControl.onselectstart = () => {return false};
+
+	swiperControlPositioning();
+	window.onresize = swiperControlPositioning;
+
+	function swiperControlPositioning() {
+		swiperControl.style.left = swiper.width / 2 - swiperControl.getBoundingClientRect().width / 2 + `px`;
+	}
+
 
 
 });
