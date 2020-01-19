@@ -1,6 +1,6 @@
 .swiper__control
   position: absolute
-  bottom: 25px
+  bottom: 7%
   padding: 0.3rem 0.5rem
 
   background-color: rgba(0, 0, 0, 0.3)
@@ -68,6 +68,8 @@
   margin-right: 6px
 
   border-radius: 0
+  //border: 1px solid rgba(#ffffff, 0.2)
+
   background: #ffffff
   opacity: 1
   outline: none
@@ -80,6 +82,37 @@
 
 .swiper-pagination-bullet-active
   background-color: #c34f42
+  //border: 1px solid rgba(#c34f42, 0.2)
+
+@media (max-width: 991px)
+  .swiper__control
+    padding: 0.3rem
+
+  .swiper-button-prev,
+  .swiper-button-next
+    display: none
+
+  .swiper-pagination-bullet
+    width: 8px
+    height: 8px
+    margin-right: 4px
+
+@media (max-width: 575px)
+  .swiper__control
+    bottom: 4%
+    padding: 0
+
+  .swiper-pagination
+    padding: 0
+
+  .swiper-pagination-bullet
+    width: 6px
+    height: 6px
+
+
+
+
+
 
 
 
