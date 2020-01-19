@@ -1,0 +1,85 @@
+.swiper__control
+  position: absolute
+  bottom: 25px
+  padding: 0.3rem 0.5rem
+
+  background-color: rgba(0, 0, 0, 0.3)
+  border-radius: 5px
+  z-index: 20
+
+.swiper-button-prev,
+.swiper-button-next
+  position: static
+  display: inline-block
+  width: 7px
+  height: 13px
+  margin-top: 0
+
+  outline: none
+
+.swiper-button-prev:after,
+.swiper-button-next:after
+  width: 0
+  height: 0
+  outline: none
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next
+  position: relative
+  top: 2px
+  left: 0
+  right: auto
+  height: 13px
+  background: url("../img/interface/carousel_prev.png") center center no-repeat
+
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after
+  content: none
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev
+  position: relative
+  top: 2px
+  right: 0
+  left: auto
+  width: 7px
+  height: 13px
+  background: url("../img/interface/carousel_next.png") center center no-repeat
+
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after
+  content: none
+
+.swiper-pagination
+  position: static
+  display: inline-block
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets
+  bottom: 0
+  left: 0
+  width: 100%
+
+.swiper-pagination-bullet
+  display: inline-block
+  width: 9px
+  height: 9px
+  margin-right: 6px
+
+  border-radius: 0
+  background: #ffffff
+  opacity: 1
+  outline: none
+
+.swiper-pagination-bullet:first-of-type
+  margin-left: 4px
+
+.swiper-pagination-bullet:last-of-type
+  margin-right: 4px
+
+.swiper-pagination-bullet-active
+  background-color: #c34f42
+
+
+

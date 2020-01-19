@@ -2,7 +2,8 @@
   &__section
     padding-top: 3rem
     padding-bottom: 3.87rem
-    background-color: $background_bright
+
+    background: $background_bright url("../img/back/photos_back_1.png") 12% 115% no-repeat
 
   &__title
     margin-bottom: 0.5rem
@@ -17,6 +18,7 @@
     font: 300 1.067rem / 1.533rem "Roboto", sans-serif
 
     color: $primary
+    z-index: 10
 
   &__paragraph
     margin-top: 2rem
@@ -24,6 +26,94 @@
   &__carousel
     position: relative
     perspective: 200px
+
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      right: -36px
+      width: 36px
+      height: 102px
+      background: url("../img/back/slice.jpg")
+
+      z-index: -2
+
+.swiper-container, .photos__carousel
+  width: 566px
+  height: 334px
+
+@media (max-width: 1820px)
+  .photos
+    &__section
+      background: $background_bright url("../img/back/photos_back_1.png") 10% 115% no-repeat
+
+@media (max-width: 1590px)
+  .photos
+    &__section
+      background: $background_bright url("../img/back/photos_back_1.png") 8% 115% no-repeat
+
+@media (max-width: 1470px)
+  .photos
+    &__section
+      background: $background_bright url("../img/back/photos_back_1.png") 5% 115% no-repeat
+
+@media (max-width: 1360px)
+  .photos
+    &__section
+      background: $background_bright url("../img/back/photos_back_1.png") left 115% no-repeat
+
+@media (max-width: 1270px)
+
+@media (max-width: 1199px)
+  .photos
+    &__wrapper
+      justify-content: space-around
+
+      &__paragraph
+        margin-top: 1rem
+
+  .swiper-container, .photos__carousel
+    width: calc(566px * 0.85)
+    height: calc(334px * 0.85)
+
+@media (max-width: 991px)
+  .photos
+    &__section
+      background: $background_bright
+
+    &__wrapper
+      flex-direction: column
+      align-items: center
+
+    &__text
+      max-width: 70%
+
+@media (max-width: 767px)
+
+@media (max-width: 575px)
+  .photos
+    &__carousel
+      box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.78)
+
+      &::after
+       content: none
+
+    &__shadow
+      display: none
+
+  .swiper-container, .photos__carousel
+    width: calc(566px * 0.7)
+    height: calc(334px * 0.7)
+
+@media (max-width: 480px)
+  .swiper-container, .photos__carousel
+    width: calc(566px * 0.5)
+    height: calc(334px * 0.5)
+
+@media (max-width: 420px)
+  .swiper-container, .photos__carousel
+    width: calc(566px * 0.4)
+    height: calc(334px * 0.4)
 
 
 
