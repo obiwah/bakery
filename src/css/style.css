@@ -376,6 +376,10 @@ h1, h2, h3, p {
   display: none;
 }
 
+img {
+  width: 100%;
+}
+
 @media (max-width: 1199px) {
   html {
     font-size: 14px;
@@ -533,6 +537,29 @@ h1, h2, h3, p {
   box-shadow: 0px -9px 15px 1px rgba(0, 0, 0, 0.51);
 }
 
+.video__player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.video__mask {
+  opacity: 0.1;
+  width: calc(100% - 10px);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.video__play {
+  position: absolute;
+  cursor: pointer;
+}
+.video__play--small {
+  position: absolute;
+}
+.video__thumb {
+  position: absolute;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -545,6 +572,8 @@ h1, h2, h3, p {
 }
 .header__logo {
   float: left;
+  height: 116px;
+  width: auto;
   margin-top: -7px;
 }
 .header__logo:hover {
@@ -566,6 +595,7 @@ h1, h2, h3, p {
 }
 .brand__title-img {
   height: 20px;
+  width: auto;
   margin-top: 1.8rem;
 }
 .brand__subtitle {
@@ -986,10 +1016,6 @@ h1, h2, h3, p {
   height: 334px;
 }
 
-.swiper-slide img {
-  width: 100%;
-}
-
 @media (max-width: 1820px) {
   .photos__section {
     background: #fff9e6 url("../img/back/photos_back_1.png") 10% 115% no-repeat;
@@ -1186,6 +1212,41 @@ h1, h2, h3, p {
     width: 6px;
     height: 6px;
   }
+}
+.advantages__section {
+  padding-top: 3.2rem;
+  background: url("../img/back/baker.png") left bottom no-repeat;
+}
+.advantages__title {
+  margin-bottom: 1rem;
+}
+.advantages__wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.advantages__video {
+  position: relative;
+  width: 42.067rem;
+  height: 27.067rem;
+  margin-bottom: 4.2rem;
+}
+.advantages__play {
+  width: 3rem;
+  height: 5.87rem;
+  top: 33.5%;
+  left: 47.5%;
+}
+.advantages__play--small {
+  width: 1.2rem;
+  height: 1.3rem;
+  bottom: 1.3rem;
+  left: 1.6rem;
+}
+.advantages__thumb {
+  width: 1.2rem;
+  height: 1.2rem;
+  bottom: 1.3rem;
+  left: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */
