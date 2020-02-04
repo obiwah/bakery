@@ -88,6 +88,7 @@ document.addEventListener(`DOMContentLoaded`, function () { //wait for document 
 
 	// 4. The API will call this function when the video player is ready.
 	function onPlayerReady(event) {
+		event.target.setVolume(5),
 		event.target.playVideo();
 	}
 
