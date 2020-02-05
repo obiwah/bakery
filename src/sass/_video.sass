@@ -1,0 +1,96 @@
+.video
+  border-radius: 7px
+
+  overflow: hidden
+
+  &-container
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+      background-color: rgba(black, 0.7)
+
+  &__play
+    position: absolute
+    top: 37.5%
+    left: 47.1%
+
+    width: 8%
+    height: 25%
+
+    cursor: pointer
+
+  &__controls
+    position: relative
+    height: 47px
+
+    background-color: #273747
+
+  &__play-pause
+    position: absolute
+    left: 3.7%
+    top: 30%
+    width: 1.9%
+    height: auto
+
+  &__progress
+    &-now
+      display: inline-block
+
+  &__progress
+    &-bar
+      position: absolute
+      top: 39%
+      left: 8.8%
+      width: 62%
+      height: 25%
+
+      border-radius: 10px
+
+      background-color: #d6dbdf
+
+  &__thumb
+    position: absolute
+    left: 8.8%
+    top: 30%
+    width: 3%
+    height: auto
+
+  &__time
+    position: absolute
+    left: 74.8%
+    top: 35%
+
+    font: 300 0.9rem / 1rem "Raleway", sans-serif
+
+    color: #d6dbdf
+
+    &--total
+      margin-left: -3px
+
+      opacity: 0.3
+
+    &-separator
+      margin-left: -1px
+
+      opacity: 0.3
+
+  &__mute
+    position: absolute
+    left: 88.9%
+    top: 34%
+    width: 2.7%
+    height: auto
+
+  &__fullscreen
+    position: absolute
+    left: 94.5%
+    top: 33%
+    width: 2.4%
+    height: auto
