@@ -59,41 +59,4 @@ document.addEventListener(`DOMContentLoaded`, function () { //wait for document 
 	function swiperControlPositioning() {
 		swiperControl.style.left = swiper.width / 2 - swiperControl.getBoundingClientRect().width / 2 + `px`;
 	}
-
-	// YouTube IFrame Player API
-	const advantagesPlay = document.querySelector(`.advantages__play`);
-
-	// 2. This code loads the IFrame Player API code asynchronously.
-	let tag = document.createElement('script');
-
-	tag.src = "https://www.youtube.com/iframe_api";
-	let firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-	// document.body.insertAdjacentElement('beforeend', tag);
-
-	// 3. This function creates an <iframe> (and YouTube player)
-	//    after the API code downloads.
-	let player;
-
-	advantagesPlay.onmousedown = function onYouTubeIframeAPIReady() {
-			player = new YT.Player('advantages-video', {
-				height: '360',
-				width: '640',
-				videoId: 'jwywG820naw',
-				events: {
-					'onReady': onPlayerReady,
-				}
-			});
-	};
-
-	// 4. The API will call this function when the video player is ready.
-	function onPlayerReady(event) {
-		event.target.setVolume(5),
-		event.target.playVideo();
-	}
-
-
-
-
-
 });
