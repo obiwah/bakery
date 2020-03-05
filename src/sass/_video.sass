@@ -37,14 +37,25 @@
     left: 3.7%
     top: 30%
     width: 1.9%
-    height: auto
+    height: 40%
+
+    cursor: pointer
+
+    &--play
+      background: url("../img/interface/video_control_play.svg") center / cover no-repeat
+
+    &--pause
+      background: url("../img/interface/video_control_pause.svg") center / cover no-repeat
+
+    &--replay
+      background: url("../img/interface/video_control_replay.svg") center / cover no-repeat
 
   &__progress
     &-now
       display: inline-block
 
   &__progress
-    &-bar
+    &-bar, &-now
       position: absolute
       top: 39%
       left: 8.8%
@@ -55,9 +66,16 @@
 
       background-color: #d6dbdf
 
+    &-now
+      width: 0
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+
+      background-color: red
+
   &__thumb
     position: absolute
-    left: 8.8%
+    left: 8.7%
     top: 30%
     width: 3%
     height: auto

@@ -140,14 +140,18 @@
             </div>
             <!-- /#advantages-video -->
             <div class="video__controls advantages__controls">
-              <div class="video__play-pause"><img src="img/interface/video_control_play.svg" alt=""></div>
-              <div class="video__progress-now"></div>
+              <div class="video__play-pause video__play-pause--play advantages__play-pause advantages--play"></div>
               <div class="video__progress-bar"></div>
-              <div class="video__thumb"><img src="img/interface/video_control_thumb.svg" alt=""></div>
+              <div class="video__progress-now advantages__progress-now"></div>
+              <div class="video__thumb advantages__thumb"><img src="img/interface/video_control_thumb.svg" alt=""></div>
               <div class="video__time">
-                <span class="video__time--now">0:00</span>
+                <span class="video__time--now advantages__time--now">
+                  <span class="advantages__time--now-min">0</span>:<span class="advantages__time--now-sec">00</span>
+                </span>
                 <sub class="video__time-separator">/</sub>
-                <span class="video__time--total">0:00</span>
+                <span class="video__time--total advantages__time--total">
+                  <span class="advantages__time--total-min">-</span>:<span class="advantages__time--total-sec">--</span>
+                </span>
               </div>
               <div class="video__mute"><img src="img/interface/video_control_mute.png" alt=""></div>
               <div class="video__fullscreen"><img src="img/interface/video_control_fullscreen.png" alt=""></div>
@@ -190,6 +194,7 @@
   <footer></footer>
   
   <script src="js/swiper.min.js"></script>
+  <script src="js/video.js"></script>
   <script src="js/main.js"></script>
 
 </body>
